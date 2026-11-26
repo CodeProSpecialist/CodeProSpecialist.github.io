@@ -1,0 +1,31 @@
+:root {
+  color-scheme: light;
+  --ink: #142235;
+  --muted: #435569;
+  --accent: #13598b;
+  --line: #ccdbe8;
+  --paper: #f6faff;
+  font: 400 1rem/1.65 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); }
+.wrap { width: min(100% - 2.5rem, 48rem); margin-inline: auto; }
+header { background: #e4effb; border-bottom: 1px solid var(--line); padding: 2.5rem 0; }
+nav { margin-bottom: 2.5rem; }
+.brand { display: flex; align-items: center; flex-wrap: wrap; gap: .8rem 1.15rem; }
+.brand img { width: 4rem; height: 4rem; border-radius: .9rem; }
+h1, h2 { line-height: 1.2; }
+h1 { margin: 0; font-size: clamp(2rem, 6vw, 3.4rem); letter-spacing: -.04em; }
+h2 { margin: 2.25rem 0 .6rem; font-size: 1.35rem; }
+p { margin: .6rem 0 0; color: var(--muted); }
+a { color: var(--accent); text-underline-offset: .18em; }
+a:focus-visible { outline: .14rem solid var(--accent); outline-offset: .2rem; }
+main { padding-block: 1.75rem 3rem; }
+.trial { border-left: .25rem solid var(--accent); background: #fff; padding: 1rem 1.25rem; }
+.trial h2 { margin-top: 0; }
+.example { margin: 1rem 0 0; padding: 1rem 1.25rem; border: 1px solid var(--line); border-radius: .75rem; background: #fff; }
+.example ol { margin-block: .4rem 0; padding-inline-start: 1.4rem; }
+.example li + li { margin-top: .25rem; }
+dt { font-weight: 650; margin-top: .9rem; }
+dd { margin: .15rem 0 0; color: var(--muted); }
+footer { border-top: 1px solid var(--line); padding-block: 1.15rem 2rem; }
