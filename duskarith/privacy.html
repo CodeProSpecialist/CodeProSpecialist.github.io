@@ -44,23 +44,42 @@
      the program does and does not do with your data.</p>
 
   <h2>Data that stays on your computer</h2>
-  <p>All recordings and settings stay on your computer 
-    until you enable FTP upload to your own specific FTP server that you configure yourself. Duskarith does not connect
-     to the internet on its own unless the FTP upload is Enabled or unless the Web Stream Server is Enabled and Duskarith collects no personal data. 
-    All recordings are stored locally on your computer by default. The application does not automatically upload, transmit, or share your recordings with external services.
-Optional FTP upload and built-in web server features are available for users who want remote access or file transfers. These features are disabled by default and require explicit user configuration and activation.
-You remain in control of your recordings and how they are accessed or transferred.</p>
+  <p>All recordings and settings stay on your computer. Duskarith never uploads,
+     transmits or shares your recordings, camera images or detection results,
+     except snapshots sent to your own server if you turn on FTP/SFTP upload.
+     The developer receives no data about you. You remain in control of your
+     recordings and how they are accessed or transferred.</p>
 
-  <h2>No network communication</h2>
-  <p>Duskarith does not connect to the internet unless the user enables FTP or the Web Stream Server. It does not send analytics,
-     telemetry, crash reports, or usage statistics. It does not check for updates
-     over the network. The only network-capable component is FFmpeg, which is used
-     solely for local video encoding and playback.</p>
+  <h2>Network connections</h2>
+  <p>Duskarith sends no analytics, telemetry, crash reports, or usage
+     statistics. It makes only these connections:</p>
+  <ul>
+    <li><strong>Microsoft Store</strong>, to check your license and 30-day free
+        trial, restore a purchase, and check for Duskarith updates. These
+        checks are handled by Microsoft under the
+        <a href="https://privacy.microsoft.com/privacystatement">Microsoft Privacy Statement</a>.</li>
+    <li><strong>Approximate location for sunrise and sunset.</strong> About once
+        a week, Duskarith looks up the city-level location of your internet
+        connection from ipinfo.io (or ip-api.com as a backup); these services
+        see your IP address. The result is saved only on your computer.
+        Duskarith then gets sunrise, sunset and time-zone information from
+        api.sunrise-sunset.org, timeapi.io or open-meteo.com, sending only that
+        approximate location.</li>
+    <li><strong>Accurate time.</strong> Once a day Duskarith checks the clock
+        against Microsoft's time server (time.windows.com), with public web
+        servers as a fallback. Nothing about you is sent.</li>
+    <li><strong>FTP/SFTP upload</strong>, only when you turn it on, and only to
+        the server you set up yourself.</li>
+  </ul>
+  <p>The Web Stream Server is available only on your own computer (localhost)
+     and does not connect to the internet. FTP/SFTP upload and the Web Stream
+     Server are off until you turn them on.</p>
 
-  <h2>No personal information collected</h2>
-  <p>Duskarith does not collect, store, or process any personal information such as
-     your name, email address, location, or device identifiers. The program has no
-     user accounts, no sign-in, and no registration.</p>
+  <h2>Personal information</h2>
+  <p>Duskarith does not collect your name, email address, or device
+     identifiers, and has no Duskarith account or sign-in. Your license is
+     managed by Microsoft Store. The approximate location used for sunrise and
+     sunset is kept only on your computer and is never sent to the developer.</p>
 
   <h2>Camera access</h2>
   <p>Duskarith accesses your webcam through Windows DirectShow to display live video,
@@ -77,13 +96,14 @@ You remain in control of your recordings and how they are accessed or transferre
      uploaded or transmitted anywhere.</p>
 
   <h2>Children's privacy</h2>
-  <p>Duskarith does not collect any data from anyone, including children under 13.
-     There are no user accounts, no online features, and no data collection of
-     any kind.</p>
+  <p>The developer does not collect any data from anyone, including children
+     under 13. Duskarith has no user accounts and no advertising.</p>
 
   <h2>Third-party services</h2>
-  <p>Duskarith does not integrate with or send data to any third-party services,
-     advertising networks, or analytics platforms.</p>
+  <p>Duskarith has no advertising networks or analytics platforms. The only
+     third-party services it contacts are the Microsoft Store, location,
+     sunrise/sunset, time-zone and time services listed under Network
+     connections above, and your own FTP/SFTP server if you set one up.</p>
 
   <h2>Privacy, Responsible Use, and Regulatory Compliance</h2>
   <p>Duskarith is designed to enhance home security and safety while respecting individual privacy. To support compliance with applicable privacy and surveillance laws, Duskarith exclusively records video and never captures, records, or transmits microphone audio.</p>
